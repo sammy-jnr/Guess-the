@@ -12,14 +12,14 @@
 </head>
 <body>
     <div id="firstpageContainer">
-        <nav id="navbar">
+        <nav class="navbar" id="homepage_navbar">
             <img src="IconsAndImages\logo.svg" alt="" id="logoIcon">
             <div style="display: none;">
                 <div>home</div>
                 <div>settings</div>
                 <div>play</div>
             </div>
-            <img src="IconsAndImages\menuIcon.svg" alt="" id="homepage_menuIcon">
+            <img src="IconsAndImages\menuIcon.svg" alt="" id="homepage_menuIcon" class="menuIcons">
         </nav>
         <div id="homepageTitle">
             <div id="homepageTitle_sections">
@@ -43,8 +43,8 @@
         </div>
         <div id="homepageMenu">
             <img src="IconsAndImages\closeIcon.svg" alt="" id="homepage_closeIcon">
-            <div class="homepageMenu_items">Home</div>
-            <div class="homepageMenu_items">Settings</div>
+            <a href="index.html" class="links"><div id="trial" class="homepageMenu_items">Home</div></a>
+            <a href="settings.html" class="links"><div class="homepageMenu_items">Settings</div></a>
             <div class="homepageMenu_items">Play game</div>
             <div class="homepageMenu_items">Sign up / Sign in</div>
         </div>
