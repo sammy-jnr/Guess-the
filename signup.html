@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+</head>
+<body>
+    <div id="signupContainer">
+        <div id="signupContainer_header">
+            <div class="signupContainer_header_items sign_active" id="signupSelector">
+                SIGN UP
+            </div>
+            <div class="signupContainer_header_items" id="signinSelector">
+                SIGN IN
+            </div>
+        </div>
+        <div id="signupContainer_body">
+            <section id="signUp_section">
+                <div class="sign_items">
+                    <div class="first_div">Username</div>
+                    <input type="text" id="signupName" class="second_div">
+                </div>
+                <div class="sign_items">
+                    <div class="first_div">Email</div>
+                    <input type="text" id="signupEmail" class="second_div">
+                </div>
+                <div class="sign_items">
+                    <div class="first_div">Password</div>
+                    <input type="text" id="signupPassword" class="second_div">
+                </div>
+                <button id="signup_btn">sign up</button>
+            </section>
+            <section id="signIn_section">
+                <div class="sign_items">
+                    <div class="first_div">Email</div>
+                    <input type="text" id="signinEmail" class="second_div">
+                </div>
+                <div class="sign_items">
+                    <div class="first_div">Password</div>
+                    <input type="text" id="signinPassword" class="second_div">
+                </div>
+                <button id="signin_btn">sign in</button>
+            </section>
+        </div>
+    </div>
+    
+    <script  src="./settings.js" type="module"></script>
+</body>
+</html>

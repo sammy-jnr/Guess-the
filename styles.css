@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+*:focus{
+    outline: none;
+}
 #firstpageContainer{
     width: 100vw;
     height: 100vh;
@@ -38,6 +41,22 @@
     margin-top: 40px;
     opacity: 0.8;
 }
+#changingText{
+    width: calc(100%-20px);
+    height: 50px;
+    border-bottom:1px solid #e6e6f5;
+    margin: 10px;
+    color: #e6e6f5;
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 10px;
+}
+span{
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker{
+    50%{opacity: 0;}
+}
 #homepageTitle_description{
     text-align: center;
     margin: 10px 20px;
@@ -52,16 +71,22 @@
     align-items: center;
 }
 .homepageTitle_buttons{
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+
     background-color: #e6e6f5;
     color: #2b2b3a;
     font-weight: 600;
     border-radius: 6px;
     height: 50px;
+}
+.linksa{
+    color: #2b2b3a;
+    text-decoration: none;
+    min-width: calc(50% - 20px);
+    margin: 0 10px;
 }
 .homepageTitle_buttons:hover{
     background-color: #4c8bf5;
@@ -87,13 +112,13 @@
     margin-left: -30%;
     position: relative;
 }
-#homepage_closeIcon,#settingspage_closeIcon{
+#homepage_closeIcon,#settingspage_closeIcon,#playgamepage_closeIcon{
     width: 30px;
     position: absolute;
     top: 10px;
     right: 10px;
 }
-#homepageMenu,#settingspageMenu{
+#homepageMenu,#settingspageMenu,#playGamePageMenu{
     position: fixed;
     top: -100%;
     right: 10px;
@@ -102,8 +127,9 @@
     height: 100%;
     width: 70%;
     padding-top: 40px;
+    z-index: 2;
 }
-.homepageMenu_items,.settingspageMenu_items{
+.homepageMenu_items,.settingspageMenu_items,.playGamePageMenu_items{
     padding: 15px 10px;
     margin: 10px 5px;
     font-size: 1.3em;
@@ -238,7 +264,279 @@
     margin: 0 2px;
 }
 
+#playgameContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b2b3a;
+    color: #e6e6f5;
+}
+#playgameContainer_firstpage{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}
+#playgameContainer_fp_firstline{
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-around;
+}
 
+#difficultyDisplay,#categoriesDisplay{
+    display: flex;
+    flex-direction: column;
+
+}
+#difficultySelection{
+    border: 2px solid #e6e6f5;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e6e6f5;
+    color: #2b2b3a;
+    display: none;
+}
+#categorySelection{
+    border: 2px solid;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e6e6f5;
+    color: #2b2b3a;
+}
+#displaySelected,#categoriesText{
+    border: 2px solid;
+    padding:  0px 10px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.dc_selection{
+    text-align: center;
+    padding: 8px;
+}
+#startGameButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px 30px;
+    background-image: linear-gradient(90deg, #4c8bf5, #e6e6f5);
+    color: #2b2b3a;
+    font-weight: 500;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+#playgameContainer_secondpage{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+}
+#playgameContainer_sp_firstline{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 1.3em;
+}
+#questionSection{
+    width: 100%;
+    height: 40%;
+    background-color: #e6e6f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b2b3a;
+    text-align: center;
+}
+#optionsSection{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 40px 20px;
+    margin: 20px 0;
+    padding: 0 10px;
+}
+.options{
+    text-align: center;
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 5px;
+}
+#questionNavigation{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+#nextbutton,#prevbutton{
+    padding: 10px 20px;
+    background-color: #4c8bf5;
+    color: #2b2b3a;
+    border-radius: 5px;
+}
+#quit{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #c03b12;
+    margin-top: auto;
+}
+#areYouSurePopup{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #1e1e30;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    border: 2px solid ;
+    height: 100px;
+    padding: 10px 0;
+    display: none;
+}
+#areYouSurePopup_firstline{
+    margin-bottom: 10px;
+    padding-left: 20px;
+    text-align: center;
+}
+#areYouSurePopup_secondline{
+    display: flex;
+    justify-content: space-around;
+}
+.areYouSurePopup_items{
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border: 1px solid;
+}
+#playgameContainer_thirdpage{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#playgameContainer_tp_firstline{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    padding-top: 30px;
+}
+#motionGameoverDiv{
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    position: relative;
+}
+#score_circle{
+    width: 150px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    background-color: #4c8bf5;
+    color: #1e1e30;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+#playgameContainer_tp_buttons{
+    width: 100%;
+    font-size: 1.2em;
+}
+#pg_tp_buttons_div{
+    display: flex;
+    margin: 50px 0;
+}
+.pg_tp_buttons{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 20px 30px;
+    background-color: #325e69;
+    border: 1px solid;
+}
+#review_Btn{
+    background-color: #325e69;
+}
+#quit_Btn{
+    width: 100%;
+    background: #c0c0c040;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+#playgameContainer_fourthpage{
+    width: 100%;
+    min-height: 100%;
+    display: none;
+    padding-top: 25px;
+    height: auto;
+    background-color: #2b2b3a;
+}
+.review_items{
+    width: 100%;
+    min-height: 50px;
+    background-color: #252533;   
+    margin: 10px 0; 
+    padding: 10px;
+}
+.review_questions{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.review_answers{
+    width: 100%;
+    color: #b7b7c7;
+}
+#InstructionsContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252533;
+    color: #e6e6f5;
+}
+#InstructionsContainer_header{
+    font-size: 2em;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#InstructionsContainer_boby{
+    width: 100%;
+    height: calc(100% - 70px);
+    min-height: 70%;
+    background-image: linear-gradient(45deg, #c0c0c070, #e0e0e0);
+    color: #1e1e30;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+#instuctionToHomeBtn{
+    margin-top: auto;
+    background-color: #252533;
+    color: #e6e6f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
 
 
 
@@ -250,5 +548,122 @@
     #homepageImages{
         position: relative;
         top: 60px;
+    }
+}
+@media screen and (min-width:480px) {
+    #logoIcon{
+        width: 80px;
+    }
+    .menuIcons,#homepage_closeIcon,#settingspage_closeIcon,#playgamepage_closeIcon{
+        width: 35px;
+    }
+    #homepageTitle_1{
+        font-size: 8em;
+    }
+    #homepageTitle_2{
+        font-size: 5em;
+    }
+    #changingText{
+        font-size: 3em;
+        height: 100px;
+    }
+    #homepageTitle_description{
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+   
+    .homepageTitle_buttons{
+        font-size: 1.4em;
+    }
+    .homepageMenu_items{
+        font-size: 1.5em;
+        padding: 25px 15px;
+    }
+    .settingspageMenu_items{
+        padding: 25px 15px;
+    }
+    .playGamePageMenu_items{
+        padding: 25px 15px;
+    }
+    #homepageMenu,#settingspageMenu,#playGamePageMenu{
+        padding-top: 60px;
+    }
+    #logoIcon2{
+        width: 60px;
+    }
+    #settingspageContainer{
+        font-size: 1.3em;
+    }
+    #difficultySection_header{
+        padding: 25px;
+        font-size: 1.3em;
+    }
+    .difficulties{
+        padding: 20px 0;
+    }
+    .difficulties_1{
+        width: 14%;
+    }
+    .radio_outer{
+        width: 30px;
+        height: 30px;
+    }
+    .radio_inner{
+        width: 18px;
+        height: 18px;
+    }
+    #selectedCategories{
+        min-height: 120px;
+    }
+    #selectedCategories_header{
+        font-size: 1.2em;
+        padding-bottom: 15px;
+    }
+    .newDiv{
+        padding: 8px 15px;
+        margin: 0 5px;
+    }
+    #catigoriesSection_text{
+        color: #e0e0e0;
+        font-size: 1.1em;
+    }
+    .categories{
+        padding: 25px 15px;
+        margin: 4px 0;
+    }
+    .checkbox{
+        width: 22px;
+        height: 22px;
+    }
+    .checkmark{
+        width: 22px;
+    }
+    #InstructionsContainer{
+        font-size: 125%;
+    }
+    #playgameContainer{
+        font-size: 125%;
+    }
+    #displaySelected,#categoriesText{
+        width: 210px;
+        display: flex;
+        justify-content: center;
+    }
+    #startGameButton{
+        padding: 15px 45px;
+    }
+    .options{
+        padding: 11px;
+    }
+    #questionSection{
+        font-size: 1.15em;
+    }
+    #playgameContainer_tp_firstline{
+        font-size: 150px;
+    }
+    #score_circle{
+        width: 200px;
+        height: 200px;
+        font-size: 200%;
     }
 }

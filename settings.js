@@ -56,28 +56,35 @@ function removeAllDifficulty(){
     difficulty_asian.style.border = "none"
 }
 
+let Difficulty;
+localStorage.setItem("Difficulty", "medium")
+
 difficulty_easy.addEventListener("click",()=>{
     removeAllDifficulty()
     difficulty_easy_inner.style.display = "block"
     difficulty_easy.style.border = "1px solid #e6e6f54a"
+    localStorage.setItem("Difficulty", "easy")
 })
 
 difficulty_medium.addEventListener("click",()=>{
     removeAllDifficulty()
     difficulty_medium_inner.style.display = "block"
     difficulty_medium.style.border = "1px solid #e6e6f54a"
+    localStorage.setItem("Difficulty", "medium")
 })
 
 difficulty_hard.addEventListener("click",()=>{
     removeAllDifficulty()
     difficulty_hard_inner.style.display = "block"
     difficulty_hard.style.border = "1px solid #e6e6f54a"
+    localStorage.setItem("Difficulty", "hard")
 })
 
 difficulty_asian.addEventListener("click",()=>{
     removeAllDifficulty()
     difficulty_asian_inner.style.display = "block"
     difficulty_asian.style.border = "1px solid #e6e6f54a"
+    localStorage.setItem("Difficulty", "asian")
 })
 
 let cars_category = document.getElementById("cars_category")
@@ -94,6 +101,7 @@ function checkCars(){
         cars_category.classList.add("checked")
         cars_checkmark.style.display = "block"
         cars_category.style.color = "#4c8bf5"
+        if(selectedCategoryArray.includes("Cars")){return}
         selectedCategoryArray.push("Cars")
     }
     showSelected()
@@ -112,6 +120,7 @@ function checkFootballers(){
         footballers_category.classList.add("checked")
         footballers_checkmark.style.display = "block"
         footballers_category.style.color = "#4c8bf5"
+        if(selectedCategoryArray.includes("Footballers")){return}
         selectedCategoryArray.push("Footballers")
     }
     showSelected()
@@ -130,12 +139,14 @@ function checkCountries(){
         countries_category.classList.add("checked")
         countries_checkmark.style.display = "block"
         countries_category.style.color = "#4c8bf5"
+        if(selectedCategoryArray.includes("Countries")){return}
         selectedCategoryArray.push("Countries")
     }
     showSelected()
 }
 
 let selectedCategoryArray = []
+
 let dislaySelected = document.getElementById("dislaySelected")
 let tempText = document.getElementById("tempText")
 
@@ -154,8 +165,22 @@ function showSelected(){
         newDiv.innerHTML = selected
         newDiv.addEventListener("click", ()=>{
             let selectedFunc = `check${newDiv.innerHTML}`
-            console.log(selectedFunc);
+            window[selectedFunc]()
         })
         dislaySelected.appendChild(newDiv)
     }
+    localStorage.setItem("selectedCategoryArray", selectedCategoryArray)
 }
+
+window.addEventListener("load", ()=>{
+    if (!localStorage.getItem("selectedCategoryArray").length > 0){return}
+    else{
+        let tempselectedCategoryArray = localStorage.getItem("selectedCategoryArray")
+        selectedCategoryArray = tempselectedCategoryArray.split(",")
+        console.log(selectedCategoryArray)
+        showSelected()
+        if(selectedCategoryArray.includes("Footballers")){checkFootballers()}
+        if(selectedCategoryArray.includes("Countries")){checkCountries()}
+        if(selectedCategoryArray.includes("Cars")){checkCars()}
+    }
+})

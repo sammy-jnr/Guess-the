@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play game</title>
+</head>
+<body>
+    <div id="playgameContainer">
+        <div id="playgameContainer_firstpage">
+            <nav class="navbar" id="playgamepage_navbar">
+                <img src="/IconsAndImages\logo.svg" alt="" id="logoIcon" style="visibility: hidden;" >
+                <div style="display: none;">
+                    <div>home</div>
+                    <div>settings</div>
+                    <div>play</div>
+                </div>
+                <img src="/IconsAndImages\menuIcon.svg" alt="" id="playgamepage_menuIcon" class="menuIcons">
+            </nav>
+            <div id="playGamePageMenu">
+                <img src="/IconsAndImages\closeIcon.svg" alt="" id="playgamepage_closeIcon">
+                <a href="index.html" class="links"><div class="playGamePageMenu_items">Home</div></a>
+                <a href="settings.html" class="links"><div class="playGamePageMenu_items">Settings</div></a>
+                <a href="playGame.html" class="links"><div class="playGamePageMenu_items">Play game</div></a>
+                <a href="/instruction.html" class="links"><div class="playGamePageMenu_items">Instructions</div></a>
+            </div>
+            <div id="playgameContainer_fp_firstline">
+                <div id="difficultyDisplay">
+                   <div id="displaySelected">Difficulty:medium</div> 
+                    <div id="difficultySelection">
+                        <div class="dc_selection" id="easy_selection">Easy</div>
+                        <div class="dc_selection dc_selection_active" id="medium_selection">Medium</div>
+                        <div class="dc_selection" id="hard_selection">Hard</div>
+                        <div class="dc_selection" id="asian_selection">Asian</div>
+                    </div>
+                </div>
+                <div id="categoriesDisplay">
+                    <div id="categoriesText">Selected categories</div>
+                    <div id="categorySelection"></div>
+                </div>
+            </div>
+            <div id="startGameButton">
+                START
+            </div>
+        </div>
+        <div id="playgameContainer_secondpage">
+            <div id="playgameContainer_sp_firstline">
+                <div id="displayScore">Question : 1/10</div>
+                <div id="displayTime">Time: 2:00</div>
+            </div>
+            <div id="questionSection">
+                <div id="displayQuestion">hnkhu</div>
+            </div>
+            <div id="optionsSection">
+                <div class="options" id="option1">sdfsssd</div>
+                <div class="options" id="option2">sdfsssd</div>
+                <div class="options" id="option3">sdfsssd</div>
+                <div class="options" id="option4">sdfsssd</div>
+            </div>
+            <div id="questionNavigation">
+                <div id="prevbutton">PREV</div>
+                <div id="nextbutton">NEXT</div>
+            </div>
+            
+            <div id="areYouSurePopup">
+                <div id="areYouSurePopup_firstline">Are you sure?</div>
+                <div id="areYouSurePopup_secondline">
+                    <div class="areYouSurePopup_items" id="quitNo">No</div>    
+
+                    <div class="areYouSurePopup_items" id="quitYes">Yes</div>
+                </div>
+            </div>
+            <div id="quit">
+                QUIT GAME
+            </div>
+        </div>
+        <div id="playgameContainer_thirdpage">
+            <div id="playgameContainer_tp_firstline">
+                <div id="motionGameoverDiv">
+                    Game Over
+                </div>
+            </div>
+            <div id="playgameContainer_tp_secondline">
+                <div id="score_circle">
+                    80%
+                </div>
+            </div>
+            <div id="playgameContainer_tp_buttons">
+                <div id="pg_tp_buttons_div">
+                    <div class="pg_tp_buttons" id="playAgain_Btn">
+                        Play again
+                    </div>
+                    <div class="pg_tp_buttons" id="review_Btn">
+                        Review
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div id="playgameContainer_fourthpage"></div>
+    </div>
+
+
+
+
+    <script src="/playgame.js" type="module"></script>
+</body>
+</html>
