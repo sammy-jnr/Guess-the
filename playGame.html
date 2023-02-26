@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play game</title>
+    <link rel = "icon" href = "titleLogo.svg" type = "image/x-icon">
 </head>
 <body>
     <div id="playgameContainer">
         <div id="playgameContainer_firstpage">
             <nav class="navbar" id="playgamepage_navbar">
                 <img src="/IconsAndImages\logo.svg" alt="" id="logoIcon" style="visibility: hidden;" >
-                <div style="display: none;">
-                    <div>home</div>
-                    <div>settings</div>
-                    <div>play</div>
+                <div  class="bigscreenNav">
+                    <a href="index.html" class="links2"><div class="bigscreenNav_items">Home</div></a>
+                    <a href="settings.html" class="links2"><div class="bigscreenNav_items">Settings</div></a>
+                    <a href="playGame.html" style="color:  #a0a0a0ad;" class="links2"><div class="bigscreenNav_items">Play game</div></a>
+                    <a href="instruction.html" class="links2"><div class="bigscreenNav_items">Instructions</div></a>
                 </div>
                 <img src="/IconsAndImages\menuIcon.svg" alt="" id="playgamepage_menuIcon" class="menuIcons">
             </nav>
@@ -38,10 +40,10 @@
                 </div>
                 <div id="categoriesDisplay">
                     <div id="categoriesText">Selected categories</div>
-                    <div id="categorySelection"></div>
+                    <!-- <div id="categorySelection"></div> -->
                 </div>
             </div>
-            <div id="startGameButton">
+            <div id="startGameButton" class="hoverable">
                 START
             </div>
         </div>
@@ -67,12 +69,12 @@
             <div id="areYouSurePopup">
                 <div id="areYouSurePopup_firstline">Are you sure?</div>
                 <div id="areYouSurePopup_secondline">
-                    <div class="areYouSurePopup_items" id="quitNo">No</div>    
+                    <div class="areYouSurePopup_items hoverable" id="quitNo">No</div>    
 
-                    <div class="areYouSurePopup_items" id="quitYes">Yes</div>
+                    <div class="areYouSurePopup_items hoverable" id="quitYes">Yes</div>
                 </div>
             </div>
-            <div id="quit">
+            <div id="quit" class="hoverable">
                 QUIT GAME
             </div>
         </div>

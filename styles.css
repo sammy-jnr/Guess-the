@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    
 }
 *:focus{
     outline: none;
+}
+.hoverable:hover{
+    cursor: pointer;
 }
 #firstpageContainer{
     width: 100vw;
@@ -15,6 +19,8 @@
 }
 #logoIcon{
     width: 65px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 .navbar{
     width: 100%;
@@ -23,6 +29,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.bigscreenNav{
+    display: none;
+}
 .menuIcons{
     width: 30px;
     margin: 0 20px;
@@ -30,6 +39,7 @@
 #homepageTitle_1{
     font-size: 6em;
     text-align: center;
+    overflow-x: auto;
 }
 #homepageTitle_2{
     font-size: 3em;
@@ -51,11 +61,9 @@
     font-size: 1.8em;
     padding-top: 10px;
 }
-span{
-    animation: blinker 1s linear infinite;
-}
-@keyframes blinker{
-    50%{opacity: 0;}
+
+#homepageTitle_22,#homepageTitle_12,#changingText2{
+    display: none;
 }
 #homepageTitle_description{
     text-align: center;
@@ -75,7 +83,6 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: #e6e6f5;
     color: #2b2b3a;
     font-weight: 600;
@@ -88,14 +95,6 @@ span{
     min-width: calc(50% - 20px);
     margin: 0 10px;
 }
-.homepageTitle_buttons:hover{
-    background-color: #4c8bf5;
-    color: white;
-    transform: scaleX(1.1);
-    height: 60px;
-    font-size: large;
-    cursor: pointer;
-}
 #homepageImages{
     width: 100%;
     display: flex;
@@ -107,10 +106,17 @@ span{
     margin-left: 15%;
     position: relative;
     transform: scaleX(-1);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 #blueQuestionMark{
     margin-left: -30%;
     position: relative;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.homepageImg2{
+    display: none;
 }
 #homepage_closeIcon,#settingspage_closeIcon,#playgamepage_closeIcon{
     width: 30px;
@@ -148,7 +154,8 @@ span{
     text-decoration: none;
 }
 #difficultySection{
-    width: 100%;
+    width: calc(100% - 10px);
+    overflow-x: hidden;
 }
 #difficultySection_header{
     display: flex;
@@ -285,7 +292,9 @@ span{
 #difficultyDisplay,#categoriesDisplay{
     display: flex;
     flex-direction: column;
-
+}
+#difficultyDisplay:hover{
+    cursor: pointer;
 }
 #difficultySelection{
     border: 2px solid #e6e6f5;
@@ -350,6 +359,9 @@ span{
     justify-content: center;
     color: #2b2b3a;
     text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 15px;
 }
 #optionsSection{
     width: 100%;
@@ -359,12 +371,16 @@ span{
     gap: 40px 20px;
     margin: 20px 0;
     padding: 0 10px;
+    margin-top: auto;
 }
 .options{
     text-align: center;
     border: 1px solid;
     padding: 8px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #questionNavigation{
     display: flex;
@@ -376,6 +392,8 @@ span{
     background-color: #4c8bf5;
     color: #2b2b3a;
     border-radius: 5px;
+    min-width: 98px;
+    text-align: center;
 }
 #quit{
     bottom: 0;
@@ -385,18 +403,25 @@ span{
     background-color: #c03b12;
     margin-top: auto;
 }
+#quitNo{
+    background-color: #c1f7c1;
+}
+#quitYes{
+    background-color: #f7c1c1;
+}
 #areYouSurePopup{
     width: 100%;
+    max-width: 700px;
     position: absolute;
     top: 50%;
     left: 50%;
     background-color: #1e1e30;
     transform: translate(-50%,-50%);
     z-index: 2;
-    border: 2px solid ;
-    height: 100px;
-    padding: 10px 0;
+    border: 4px solid ;
+    padding: 10px 0 0 0;
     display: none;
+    border-radius: 5px;
 }
 #areYouSurePopup_firstline{
     margin-bottom: 10px;
@@ -411,7 +436,10 @@ span{
     padding: 20px;
     width: 50%;
     text-align: center;
-    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e1e30;
 }
 #playgameContainer_thirdpage{
     width: 100%;
@@ -450,29 +478,31 @@ span{
 }
 #pg_tp_buttons_div{
     display: flex;
-    margin: 50px 0;
+    flex-direction: column;
+    margin: 140px 0 0 0;
+    align-items: center;
 }
 .pg_tp_buttons{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 80%;
     padding: 20px 30px;
     background-color: #325e69;
-    border: 1px solid;
+    border: 2px solid;
+    margin: 10px 0;
+    border-radius: 5px;
+    max-width: 400px;
 }
 #review_Btn{
-    background-color: #325e69;
+    background-color: #325e6994;
 }
 #quit_Btn{
-    width: 100%;
-    background: #c0c0c040;
+    background: #7f2d7fd4;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 15.5px );
     -webkit-backdrop-filter: blur( 15.5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 10px 30px;
-    border-radius: 10px 10px 0 0;
     height: 50px;
     display: flex;
     align-items: center;
@@ -481,27 +511,25 @@ span{
     font-size: 1.2em;
 }
 #playgameContainer_fourthpage{
-    width: 100%;
     min-height: 100%;
     display: none;
     padding-top: 25px;
     height: auto;
     background-color: #2b2b3a;
+    overflow-x: hidden;
+    /* padding: 10px; */
 }
 .review_items{
-    width: 100%;
     min-height: 50px;
     background-color: #252533;   
     margin: 10px 0; 
     padding: 10px;
 }
 .review_questions{
-    width: 100%;
     margin-bottom: 10px;
     font-size: 1.1em;
 }
 .review_answers{
-    width: 100%;
     color: #b7b7c7;
 }
 #InstructionsContainer{
@@ -538,7 +566,11 @@ span{
     height: 50px;
 }
 
-
+@media screen and (max-width: 200px) {
+    #playgameContainer,#firstpageContainer{
+        overflow-x: auto;
+    }
+}
 
 @media screen and (max-width:480px) and (min-height:700px){
     #homepageTitle_buttonSection{
@@ -550,7 +582,11 @@ span{
         top: 60px;
     }
 }
-@media screen and (min-width:480px) {
+@media screen and (min-width:481px) {
+    #firstpageContainer{
+        min-height: 100vh;
+        height: auto;
+    }
     #logoIcon{
         width: 80px;
     }
@@ -558,13 +594,13 @@ span{
         width: 35px;
     }
     #homepageTitle_1{
-        font-size: 8em;
+        font-size: 6em;
     }
     #homepageTitle_2{
-        font-size: 5em;
+        font-size: 4em;
     }
     #changingText{
-        font-size: 3em;
+        font-size: 2.5em;
         height: 100px;
     }
     #homepageTitle_description{
@@ -576,14 +612,18 @@ span{
         font-size: 1.4em;
     }
     .homepageMenu_items{
-        font-size: 1.5em;
-        padding: 25px 15px;
+        font-size: 1.3em;
+        padding: 15px;
+    }
+    #homepageImg{
+        position: relative;
+        top: -20px;
     }
     .settingspageMenu_items{
-        padding: 25px 15px;
+        padding: 15px;
     }
     .playGamePageMenu_items{
-        padding: 25px 15px;
+        padding: 15px;
     }
     #homepageMenu,#settingspageMenu,#playGamePageMenu{
         padding-top: 60px;
@@ -593,6 +633,7 @@ span{
     }
     #settingspageContainer{
         font-size: 1.3em;
+        width: auto;
     }
     #difficultySection_header{
         padding: 25px;
@@ -623,6 +664,9 @@ span{
         padding: 8px 15px;
         margin: 0 5px;
     }
+    .newDiv:hover{
+        cursor: pointer;
+    }
     #catigoriesSection_text{
         color: #e0e0e0;
         font-size: 1.1em;
@@ -630,6 +674,9 @@ span{
     .categories{
         padding: 25px 15px;
         margin: 4px 0;
+    }
+    .categories:hover{
+        cursor: pointer;
     }
     .checkbox{
         width: 22px;
@@ -653,10 +700,23 @@ span{
         padding: 15px 45px;
     }
     .options{
-        padding: 11px;
+        padding: 20px;
+        font-weight: 500;
+        font-size: 110%;
+        width: 100%;
+        max-width: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
-    #questionSection{
+    .options:hover,#nextbutton,#prevbutton{
+        cursor: pointer;
+    }
+    #optionsSection{
         font-size: 1.15em;
+        justify-content: center;
+        justify-items: center;
     }
     #playgameContainer_tp_firstline{
         font-size: 150px;
@@ -665,5 +725,209 @@ span{
         width: 200px;
         height: 200px;
         font-size: 200%;
+    }
+
+}
+@media screen and (min-width:769px){
+    .bigscreenNav{
+        display: flex;
+        font-size: 23px;
+        margin-right: 100px;
+    }
+    .bigscreenNav_items{
+        margin: 0 25px;
+    }
+    .links2{
+        color: #e6e6f5;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .links2:hover{
+        color: #a0a0a0e1;
+        border-bottom: 1px solid;
+    }
+    .menuIcons{
+        display: none;
+    }
+    #container_inner{
+        display: flex;
+    }
+    #changingText2{
+        display: block;
+        width: calc(100%-20px);
+        position: relative;
+        height: 50px;
+        border-bottom:1px solid #e6e6f5;
+        margin: 10px 0;
+        color: #e6e6f5;
+        text-align: center;
+        font-size: 1.8em;
+        padding-top: 10px;
+    }
+    #homepageTitle_12{
+        font-size: 5.5em;
+        text-align: center;
+        display: block;
+        padding-top: 20px;
+    }
+    #homepageTitle_22{
+        font-size: 3.5em;
+        text-align: center;
+        line-height: 1;
+        display: block;
+    }
+    #homepageTitle_2,#homepageTitle_1,#changingText{
+        display: none;
+    }
+    #homepageTitle{
+        width: 50%;
+    }
+    #homepageTitle_description{
+        padding: 50px 0;
+        margin: 20px 0;
+        font-size: 22px;
+    }
+    #homepageImages{
+        display: none;
+    }
+    .homepageImg2{
+        display: block;
+        width: 25%;
+        position: relative;
+        top: 20px;
+    }
+    #pinkQuestionMark2{
+        transform: scaleX(-1);
+    }
+    #InstructionsContainer{
+        font-size: 150%;
+    }
+    #settingspage_navbar{
+        margin-bottom: 70px;
+    }
+   #playgamepage_navbar{
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #b7b7c727;
+        position: relative;
+        top: 20px;
+    }
+    #questionSection{
+        font-size: 25px;
+        padding: 0 70px;
+        line-height: 1.2;
+    }
+    
+}
+@media screen and (min-width:1200px) {
+    #firstpageContainer{
+        font-size: 150%;
+        overflow-x: hidden;
+    }
+    #settingspageContainer{
+        font-size: 150%;
+    }
+    #homepage_navbar{
+        height: 100px;
+    }
+    .links2{
+        font-size: 30px;
+    }
+    #logoIcon{
+        width: 100px;
+    }
+    #logoIcon2{
+        width: 80px;
+        margin-top: 10px;
+    }
+    #homepageTitle_description{
+        font-size: 30px;
+    }
+    .homepageTitle_buttons{
+        padding: 40px;
+    }
+    .homepageTitle_buttons:hover{
+        background-color: #4c8af580;
+        color: white;
+        transform: scaleX(1.1);
+        font-size: 110%;
+        cursor: pointer;
+    }
+    #difficultySection_header_text{
+        font-size: 120%;
+    }
+    #difficultySection_header:hover{
+        cursor: pointer;
+    }
+    .difficulties{
+        font-size: 110%;
+    }
+    .radio_outer{
+        width: 35px;
+        height: 35px;
+    }
+    .radio_inner{
+        width: 20px;
+        height: 20px;
+    }
+    .difficulties_1{
+        width: 7%;
+    }
+    #selectedCategories{
+        font-size: 115%;
+        min-height: 150px;
+    }
+    #catigoriesSection{
+        font-size: 115%;
+    }
+    #catigoriesSection_text{
+        margin: 20px;
+    }
+    .categories{
+        height: 70px;
+        margin: 6px 0;
+    }
+    .checkbox{
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+    }
+    .checkmark{
+        width: 32px;
+    }
+    #InstructionsContainer{
+        display: flex;
+        flex-direction: column;
+        font-size: 200%;
+    }
+    #InstructionsContainer_header,#InstructionsContainer_boby{
+        max-width: 1400px;
+        margin: auto;
+    }
+    #displaySelected,#categoriesText{
+        width: 400px;
+        font-size: 140%;
+    }
+    .dc_selection{
+        height: 60px;
+        font-size: 130%;
+        padding-top: 15px
+    }
+    #startGameButton{
+        padding: 20px 110px;
+        font-size: 150%;
+    }
+    #startGameButton:hover{
+        cursor: pointer;
+        font-size: 180%;
+    }
+    #questionSection{
+        font-size: 30px;
+        padding: 0 100px;
+        line-height: 1.4;
+    }
+    #pg_tp_buttons_div{
+        flex-direction: row;
+        justify-content: space-around;
     }
 }

@@ -8,15 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <link rel = "icon" href = "titleLogo.svg" type = "image/x-icon">
 </head>
 <body>
     <div id="settingspageContainer">
         <nav id="settingspage_navbar" class="navbar">
             <img src="/IconsAndImages\logo.svg" alt="" id="logoIcon2">
-            <div style="display: none;">
-                <div>home</div>
-                <div>settings</div>
-                <div>play</div>
+            <div  class="bigscreenNav">
+                <a href="index.html" class="links2"><div class="bigscreenNav_items">Home</div></a>
+                <a href="settings.html" style="color:  #a0a0a0ad;" class="links2"><div class="bigscreenNav_items">Settings</div></a>
+                <a href="playGame.html" class="links2"><div class="bigscreenNav_items">Play game</div></a>
+                <a href="instruction.html" class="links2"><div class="bigscreenNav_items">Instructions</div></a>
             </div>
             <img src="/IconsAndImages\menuIcon.svg" alt="" id="settingspage_menuIcon" class="menuIcons">
         </nav>
@@ -28,7 +30,7 @@
             <a href="/instruction.html" class="links"><div class="settingspageMenu_items">Instructions</div></a>
         </div>
         <section id="difficultySection">
-            <div id="difficultySection_header">
+            <div id="difficultySection_header" class="hoverable">
                 <div id="difficultySection_header_text">Difficulty</div>
                 <img src="/IconsAndImages\down_icon.svg" alt="" id="downIcon">    
                 <img src="/IconsAndImages\up_icon.svg" alt="" id="upIcon">    

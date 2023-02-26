@@ -9,38 +9,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the...</title>
+    <link rel = "icon" href = "titleLogo.svg" type = "image/x-icon">
 </head>
 <body>
     <div id="firstpageContainer">
         <nav class="navbar" id="homepage_navbar">
             <img src="IconsAndImages\logo.svg" alt="" id="logoIcon">
-            <div style="display: none;">
-                <div>home</div>
-                <div>settings</div>
-                <div>play</div>
+            <div  class="bigscreenNav">
+                <a href="index.html" style="color:  #a0a0a0ad;" class="links2"><div class="bigscreenNav_items">Home</div></a>
+                <a href="settings.html" class="links2"><div class="bigscreenNav_items">Settings</div></a>
+                <a href="playGame.html" class="links2"><div class="bigscreenNav_items">Play game</div></a>
+                <a href="instruction.html" class="links2"><div class="bigscreenNav_items">Instructions</div></a>
             </div>
             <img src="IconsAndImages\menuIcon.svg" alt="" id="homepage_menuIcon" class="menuIcons">
         </nav>
-        <div id="homepageTitle">
-            <div id="homepageTitle_sections">
-                <div id="homepageTitle_1">Guess</div> 
-                <div id="homepageTitle_2">the</div> 
-                <div id="changingText"></div>
+            <div id="homepageTitle_sections2">
+                <div id="homepageTitle_12">Guess</div> 
+                <div id="homepageTitle_22">the</div> 
+                <div id="changingText2"></div>
             </div>
-            <div id="homepageTitle_description">
-                This is a simple guessing game where you are given a number of hints based on the 
-                difficulty level, and you will have to guess the correct answer
-            </div>
-            <div id="homepageTitle_buttonSection">
-                <a href="playGame.html" class="linksa"><div class="homepageTitle_buttons">START GAME</div></a>
-                <a href="settings.html" class="linksa"><div class="homepageTitle_buttons">SETTINGS</div></a>
+        <div id="container_inner">
+            <img src="IconsAndImages\pink_questionmark.png" alt="" class="homepageImg2" id="pinkQuestionMark2">
+            <div id="homepageTitle">
+                <div id="homepageTitle_sections">
+                    <div id="homepageTitle_1">Guess</div> 
+                    <div id="homepageTitle_2">the</div> 
+                    <div id="changingText"></div>
+                </div>
+                <div id="homepageTitle_description">
+                    This is a simple guessing game where you are given a number of hints based on the 
+                    difficulty level, and you will have to guess the correct answer
+                </div>
+                <div id="homepageTitle_buttonSection">
+                    <a href="playGame.html" class="linksa"><div class="homepageTitle_buttons">START GAME</div></a>
+                    <a href="settings.html" class="linksa"><div class="homepageTitle_buttons">SETTINGS</div></a>
 
-            </div>  
-        </div>
-        <div id="homepageImages">
-            <img src="IconsAndImages\pink_questionmark.png" alt="" class="homepageImg" id="pinkQuestionMark">
-            <img src="IconsAndImages\blue_questionmark.png" alt="" class="homepageImg" id="blueQuestionMark">
-        </div>
+                </div>  
+            </div>
+            <img src="IconsAndImages\blue_questionmark.png" alt="" class="homepageImg2" id="blueQuestionMark2">
+            <div id="homepageImages">
+                <img src="IconsAndImages\pink_questionmark.png" alt="" class="homepageImg" id="pinkQuestionMark">
+                <img src="IconsAndImages\blue_questionmark.png" alt="" class="homepageImg" id="blueQuestionMark">
+            </div>
+        </div>    
         <div id="homepageMenu">
             <img src="IconsAndImages\closeIcon.svg" alt="" id="homepage_closeIcon">
             <a href="index.html" class="links"><div class="homepageMenu_items">Home</div></a>

@@ -3,10 +3,10 @@ let settingspage_closeIcon = document.getElementById("settingspage_closeIcon")
 let settingspage_menuIcon = document.getElementById("settingspage_menuIcon")
 function closeMenuTabs(){
     settingspageMenu.style.top = `${-100}%`
-    settingspageMenu.style.transition = "all 0.45s";
+    settingspageMenu.style.transition = "all 0.1s";
 }
 settingspage_menuIcon.addEventListener("click", ()=>{
-    settingspageMenu.style.transition = "all 0.45s";
+    settingspageMenu.style.transition = "all 0.1s";
     settingspageMenu.style.top = 0
 })
 settingspage_closeIcon.addEventListener("click", closeMenuTabs)

@@ -1,17 +1,14 @@
-import { cars } from "./infoDetails.js";
-import { footballers } from "./infoDetails.js"
-import { football_clubs } from "./infoDetails.js"
-import { countries } from "./infoDetails.js"
+import { cars, football_clubs, footballers, countries } from "./infoDetails.js";
 
 let playGamePageMenu = document.getElementById("playGamePageMenu")
 let playgamepage_closeIcon = document.getElementById("playgamepage_closeIcon")
 let playgamepage_menuIcon = document.getElementById("playgamepage_menuIcon")
 function closeMenuTabs(){
     playGamePageMenu.style.top = `${-100}%`
-    playGamePageMenu.style.transition = "all 0.45s";
+    playGamePageMenu.style.transition = "all 0.10s";
 }
 playgamepage_menuIcon.addEventListener("click", ()=>{
-    playGamePageMenu.style.transition = "all 0.45s";
+    playGamePageMenu.style.transition = "all 0.10s";
     playGamePageMenu.style.top = 0
 })
 playgamepage_closeIcon.addEventListener("click", closeMenuTabs)
@@ -234,6 +231,7 @@ startGameButton.addEventListener("click", ()=>{
 function pushToScreen(){
     let count = 0;
     let counter = 1;
+    let doneAlready = false;
     let questionSection = document.getElementById("questionSection")
     let displayScore = document.getElementById("displayScore")
     questionSection.innerHTML = questionsArray[count]
@@ -249,7 +247,11 @@ function pushToScreen(){
     nextbutton.addEventListener("click",()=>{
         counter+=1;
         displayScore.innerHTML = `Question : ${counter}/10`
+        if(counter === 10){
+            nextbutton.innerHTML = "SUBMIT"
+        }
         if(count > 8){
+            doneAlready = true;
             endGame()
             return
         }
@@ -277,7 +279,7 @@ function pushToScreen(){
         }
         counter-=1;
         displayScore.innerHTML = `Question : ${counter}/10`
-        
+        nextbutton.innerHTML = "NEXT"
     })
     function clearingOptions(){
         option1.style.backgroundColor = "transparent"
@@ -287,8 +289,12 @@ function pushToScreen(){
     }
     let totalTime = 120;
     setInterval(function(){
-        if(totalTime == 0){endGame();
+        if(totalTime == 0){
             clearInterval(myinterval)
+            if(doneAlready == false){
+                endGame();
+                doneAlready = true;
+            }
             return;
         }
         else{
@@ -305,7 +311,8 @@ function pushToScreen(){
     let displayTime = document.getElementById("displayTime")
     let myinterval = setInterval(function(){
         countdownFunc()
-        if (totalTime > 9){displayTime.innerHTML = `${minutes}:${seconds}`}
+        const countArr = [0,1,2,3,4,5,6,7,8,9]
+        if (!countArr.includes(totalTime % 60)){displayTime.innerHTML = `${minutes}:${seconds}`}
         else{displayTime.innerHTML = `${minutes}:0${seconds}`}
     },1000)
     
@@ -628,6 +635,7 @@ function checkTotalScore(){
     if(unchangedcorrectOptionArray[7] == opt8answer){totalMark++ ;console.log(totalMark)};
     if(unchangedcorrectOptionArray[8] == opt9answer){totalMark++ ;console.log(totalMark)};
     if(unchangedcorrectOptionArray[9] == opt10answer){totalMark++;console.log(totalMark) };
+    return;
 }
 
 
@@ -708,5 +716,6 @@ review_Btn.addEventListener("click", ()=>{
     })
     playgameContainer_fourthpage.appendChild(closeBtn)
 })
+
 
 
