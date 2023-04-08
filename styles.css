@@ -8,9 +8,14 @@
 *:focus{
     outline: none;
 }
-.hoverable:hover{
+.hoverable:hover {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
     cursor: pointer;
-}
+  }
+  button:hover {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    cursor: pointer;
+  }
 #firstpageContainer{
     width: 100vw;
     height: 100vh;
@@ -410,8 +415,8 @@
     background-color: #f7c1c1;
 }
 #areYouSurePopup{
-    width: 100%;
-    max-width: 700px;
+    width: 97%;
+    max-width: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -419,12 +424,13 @@
     transform: translate(-50%,-50%);
     z-index: 2;
     border: 4px solid ;
-    padding: 10px 0 0 0;
+    padding: 15px ;
     display: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 5px solid gray;
 }
 #areYouSurePopup_firstline{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-left: 20px;
     text-align: center;
 }
@@ -434,12 +440,14 @@
 }
 .areYouSurePopup_items{
     padding: 20px;
-    width: 50%;
+    width: 40%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #1e1e30;
+    border-radius: 10px;
+    font-weight: 600;
 }
 #playgameContainer_thirdpage{
     width: 100%;

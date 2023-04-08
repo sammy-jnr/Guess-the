@@ -287,7 +287,7 @@ function pushToScreen(){
         option3.style.backgroundColor = "transparent"
         option4.style.backgroundColor = "transparent"
     }
-    let totalTime = 120;
+    let totalTime = 1200;
     setInterval(function(){
         if(totalTime == 0){
             clearInterval(myinterval)
@@ -715,6 +715,16 @@ review_Btn.addEventListener("click", ()=>{
         playgameContainer_fourthpage.style.display = "none"
     })
     playgameContainer_fourthpage.appendChild(closeBtn)
+})
+
+window.addEventListener("click",(e)=>{
+    if(e.target.id !== "areYouSurePopup" && 
+    e.target.id !== "quit" && 
+    e.target.parentNode.id !== "areYouSurePopup" && 
+    e.target.parentNode.parentNode.id !== "areYouSurePopup"
+    ){
+        areYouSurePopup.style.display = "none"
+    }
 })
 
 
