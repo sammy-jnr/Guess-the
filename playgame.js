@@ -287,7 +287,7 @@ function pushToScreen(){
         option3.style.backgroundColor = "transparent"
         option4.style.backgroundColor = "transparent"
     }
-    let totalTime = 1200;
+    let totalTime = 120;
     setInterval(function(){
         if(totalTime == 0){
             clearInterval(myinterval)
