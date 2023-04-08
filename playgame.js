@@ -319,7 +319,7 @@ function pushToScreen(){
 
     option1.addEventListener("click",()=>{
         clearingOptions()
-        option1.style.backgroundColor = "lightgreen"
+        option1.style.backgroundColor = "#52796f"
         if(count == 0){
             opt1answer = option1.innerHTML 
         }
@@ -354,7 +354,7 @@ function pushToScreen(){
     })
     option2.addEventListener("click",()=>{
         clearingOptions()
-        option2.style.backgroundColor = "lightgreen"
+        option2.style.backgroundColor = "#52796f"
         if(count == 0){
             opt1answer = option2.innerHTML 
         }
@@ -389,7 +389,7 @@ function pushToScreen(){
     })
     option3.addEventListener("click",()=>{
         clearingOptions()
-        option3.style.backgroundColor = "lightgreen"
+        option3.style.backgroundColor = "#52796f"
         if(count == 0){
             opt1answer = option3.innerHTML 
         }
@@ -424,7 +424,7 @@ function pushToScreen(){
     })
     option4.addEventListener("click",()=>{
         clearingOptions()
-        option4.style.backgroundColor = "lightgreen"
+        option4.style.backgroundColor = "#52796f"
         if(count == 0){
             opt1answer = option4.innerHTML 
         }
@@ -462,142 +462,142 @@ function pushToScreen(){
         clearingOptions()
         if(count == 0){
             if(option1.innerHTML == opt1answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt1answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt1answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt1answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 1){
             if(option1.innerHTML == opt2answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt2answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt2answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt2answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 2){
             if(option1.innerHTML == opt3answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt3answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt3answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt3answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 3){
             if(option1.innerHTML == opt4answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt4answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt4answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt4answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 4){
             if(option1.innerHTML == opt5answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt5answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt5answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt5answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 5){
             if(option1.innerHTML == opt6answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt6answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt6answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt6answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 6){
             if(option1.innerHTML == opt7answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt7answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt7answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt7answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 7){
             if(option1.innerHTML == opt8answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt8answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt8answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt8answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 8){
             if(option1.innerHTML == opt9answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt9answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt9answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt9answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else if(count == 9){
             if(option1.innerHTML == opt10answer){
-                option1.style.backgroundColor = "lightgreen"
+                option1.style.backgroundColor = "#52796f"
             }
             if(option2.innerHTML == opt10answer){
-                option2.style.backgroundColor = "lightgreen"
+                option2.style.backgroundColor = "#52796f"
             }
             if(option3.innerHTML == opt10answer){
-                option3.style.backgroundColor = "lightgreen"
+                option3.style.backgroundColor = "#52796f"
             }
             if(option4.innerHTML == opt10answer){
-                option4.style.backgroundColor = "lightgreen"
+                option4.style.backgroundColor = "#52796f"
             }
         }
         else{alert("none")}
@@ -719,11 +719,17 @@ review_Btn.addEventListener("click", ()=>{
 
 window.addEventListener("click",(e)=>{
     if(e.target.id !== "areYouSurePopup" && 
-    e.target.id !== "quit" && 
-    e.target.parentNode.id !== "areYouSurePopup" && 
-    e.target.parentNode.parentNode.id !== "areYouSurePopup"
+        e.target.id !== "quit" && 
+        e.target.parentNode.id !== "areYouSurePopup" && 
+        e.target.parentNode.parentNode.id !== "areYouSurePopup"
     ){
         areYouSurePopup.style.display = "none"
+    }
+    if(e.target.id !== "difficultyDisplay" && 
+        e.target.parentNode.id !== "difficultyDisplay" && 
+        e.target.parentNode.parentNode.id !== "difficultyDisplay"
+    ){
+        difficultySelection.style.display = "none"
     }
 })
 

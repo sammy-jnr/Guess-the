@@ -857,9 +857,8 @@
     .homepageTitle_buttons:hover{
         background-color: #4c8af580;
         color: white;
-        transform: scaleX(1.1);
         font-size: 110%;
-        cursor: pointer;
+        padding: 60px 40px;
     }
     #difficultySection_header_text{
         font-size: 120%;
