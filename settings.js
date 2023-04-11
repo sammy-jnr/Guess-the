@@ -2,12 +2,12 @@ let settingspageMenu = document.getElementById("settingspageMenu")
 let settingspage_closeIcon = document.getElementById("settingspage_closeIcon")
 let settingspage_menuIcon = document.getElementById("settingspage_menuIcon")
 function closeMenuTabs(){
-    settingspageMenu.style.top = `${-100}%`
+    settingspageMenu.style.right = `${-100}%`
     settingspageMenu.style.transition = "all 0.1s";
 }
 settingspage_menuIcon.addEventListener("click", ()=>{
     settingspageMenu.style.transition = "all 0.1s";
-    settingspageMenu.style.top = 0
+    settingspageMenu.style.right = 0
 })
 settingspage_closeIcon.addEventListener("click", closeMenuTabs)
 
@@ -182,5 +182,11 @@ window.addEventListener("load", ()=>{
         if(selectedCategoryArray.includes("Footballers")){checkFootballers()}
         if(selectedCategoryArray.includes("Countries")){checkCountries()}
         if(selectedCategoryArray.includes("Cars")){checkCars()}
+    }
+})
+
+window.addEventListener("click", (e)=>{
+    if(e.target.id !== "settingspageMenu" && e.target.id !== "settingspage_menuIcon" && e.target.parentElement.id !== "settingspageMenu" && e.target.parentElement.parentElement.id !== "settingspageMenu"){
+        settingspageMenu.style.right = `${-100}%`
     }
 })

@@ -4,12 +4,12 @@ let playGamePageMenu = document.getElementById("playGamePageMenu")
 let playgamepage_closeIcon = document.getElementById("playgamepage_closeIcon")
 let playgamepage_menuIcon = document.getElementById("playgamepage_menuIcon")
 function closeMenuTabs(){
-    playGamePageMenu.style.top = `${-100}%`
+    playGamePageMenu.style.right = `${-100}%`
     playGamePageMenu.style.transition = "all 0.10s";
 }
 playgamepage_menuIcon.addEventListener("click", ()=>{
     playGamePageMenu.style.transition = "all 0.10s";
-    playGamePageMenu.style.top = 0
+    playGamePageMenu.style.right = 0
 })
 playgamepage_closeIcon.addEventListener("click", closeMenuTabs)
 
@@ -730,6 +730,12 @@ window.addEventListener("click",(e)=>{
         e.target.parentNode.parentNode.id !== "difficultyDisplay"
     ){
         difficultySelection.style.display = "none"
+    }
+})
+
+window.addEventListener("click", (e)=>{
+    if(e.target.id !== "playGamePageMenu" && e.target.id !== "playgamepage_menuIcon" && e.target.parentElement.id !== "playGamePageMenu" && e.target.parentElement.parentElement.id !== "playGamePageMenu"){
+        playGamePageMenu.style.right = `${-100}%`
     }
 })
 
