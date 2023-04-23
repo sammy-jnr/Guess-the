@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Noto+Sans:wght@300;500&family=Poppins:wght@200&family=Roboto:wght@400;500;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the | Home</title>
-    <link rel = "icon" href = "titleLogo.svg" type = "image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="trivia" content="A trivia where you answer questions of various categories">
+  <title>Guess | home</title>
+  <link rel = "icon" href = "titleLogo.svg" type = "image/x-icon">
 </head>
 <body>
-    <div id="firstpageContainer">
-        <nav class="navbar" id="homepage_navbar">
-            <img src="IconsAndImages\logo.svg" alt="" id="logoIcon">
-            <div  class="bigscreenNav">
-                <a href="index.html" style="color:  #a0a0a0ad;" class="links2"><div class="bigscreenNav_items">Home</div></a>
-                <a href="settings.html" class="links2"><div class="bigscreenNav_items">Settings</div></a>
-                <a href="playGame.html" class="links2"><div class="bigscreenNav_items">Play game</div></a>
-                <a href="instruction.html" class="links2"><div class="bigscreenNav_items">Instructions</div></a>
-            </div>
-            <img src="IconsAndImages\menuIcon.svg" alt="" id="homepage_menuIcon" class="menuIcons">
-        </nav>
-            <div id="homepageTitle_sections2">
-                <div id="homepageTitle_12">Guess</div> 
-                <div id="homepageTitle_22">the</div> 
-                <div id="changingText2"></div>
-            </div>
-        <div id="container_inner">
-            <img src="IconsAndImages\pink_questionmark.png" alt="" class="homepageImg2" id="pinkQuestionMark2">
-            <div id="homepageTitle">
-                <div id="homepageTitle_sections">
-                    <div id="homepageTitle_1">Guess</div> 
-                    <div id="homepageTitle_2">the</div> 
-                    <div id="changingText"></div>
-                </div>
-                <div id="homepageTitle_description">
-                    This is a simple guessing game where you are given a number of hints based on the 
-                    difficulty level, and you will have to guess the correct answer
-                </div>
-                <div id="homepageTitle_buttonSection">
-                    <a href="playGame.html" class="linksa"><div class="homepageTitle_buttons hoverable">START GAME</div></a>
-                    <a href="settings.html" class="linksa"><div class="homepageTitle_buttons hoverable">SETTINGS</div></a>
-
-                </div>  
-            </div>
-            <img src="IconsAndImages\blue_questionmark.png" alt="" class="homepageImg2" id="blueQuestionMark2">
-            <div id="homepageImages">
-                <img src="IconsAndImages\pink_questionmark.png" alt="" class="homepageImg" id="pinkQuestionMark">
-                <img src="IconsAndImages\blue_questionmark.png" alt="" class="homepageImg" id="blueQuestionMark">
-            </div>
-        </div>    
-        <div id="homepageMenu">
-            <img src="IconsAndImages\closeIcon.svg" alt="" id="homepage_closeIcon">
-            <a href="index.html" class="links"><div class="homepageMenu_items">Home</div></a>
-            <a href="settings.html" class="links"><div class="homepageMenu_items">Settings</div></a>
-            <a href="playGame.html" class="links"><div class="homepageMenu_items">Play game</div></a>
-            <a href="instruction.html" class="links"><div class="homepageMenu_items">Instructions</div></a>
+  <div class="homeContainer">
+    <div class="homeTopSection">
+      <nav class="navbar" id="homepage_navbar">
+        <img src="IconsAndImages\logo.svg" alt="" id="logoIcon">
+        <div  class="bigscreenNav">
+            <a href="index.html" style="color:  #a0a0a0ad;" class="links2"><div class="bigscreenNav_items">Home</div></a>
+            <a href="settings.html" class="links2"><div class="bigscreenNav_items">Settings</div></a>
+            <a href="playGame.html" class="links2"><div class="bigscreenNav_items">Play game</div></a>
+            <a href="instruction.html" class="links2"><div class="bigscreenNav_items">Instructions</div></a>
         </div>
+        <img src="IconsAndImages\menuIcon.svg" alt="" id="homepage_menuIcon" class="menuIcons">
+    </nav>
+      <h1>Guess The</h1>
+      <div id="changingText"></div>
     </div>
+    <div class="homeBottomSection">
+      <div id="homeMainInfo">
+        This is a simple trivia game, spanning various topics where you are given 10 question with 4 options each. <br>
+        You are to complete the questions in 2 minutes, after which you will be scored at the end.
+      </div>
+      <div class="homeBottomSection1">
+        <div class="pinkIcon">
+          <img src="IconsAndImages\pink_questionmark.png" alt="" id="pinkIcon">
+        </div>
+        <div class="homeButtonsDiv">                    
+          <button><a href="playGame.html" class="linksa">Play</a></button>
+          <button><a href="settings.html" class="linksa">Settings</a></button>
+        </div>
+        <div class="blueIcon">
+          <img src="IconsAndImages\blue_questionmark.png" alt="" id="blueIcon">
+        </div>
+      </div>
+      <div class="homeImgsDiv">
+        <img src="IconsAndImages\questionMarkConbined.png" alt="">
+      </div>
 
-
-    <script src="./app.js"></script>
+    </div>
+    <div id="homepageMenu">
+      <img src="IconsAndImages\closeIcon.svg" alt="" id="homepage_closeIcon">
+      <a href="index.html" class="links"><div class="homepageMenu_items">Home</div></a>
+      <a href="settings.html" class="links"><div class="homepageMenu_items">Settings</div></a>
+      <a href="playGame.html" class="links"><div class="homepageMenu_items">Play game</div></a>
+      <a href="instruction.html" class="links"><div class="homepageMenu_items">Instructions</div></a>
+  </div>
+  </div>
+  <script src="./app.js"></script>
 </body>
 </html>

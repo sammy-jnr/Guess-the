@@ -20,7 +20,6 @@ function changeWord(){
     infoArray.forEach(function(text,index){
         setTimeout(function(){
             changingText.innerHTML = text
-            console.log(text)
         },index*2000);
     });
 }

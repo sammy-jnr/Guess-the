@@ -16,12 +16,71 @@
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
     cursor: pointer;
   }
-#firstpageContainer{
+/*  */
+.homeContainer{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #2b2b3a;
     color: #e6e6f5;
 }
+.homeTopSection > h1{
+    font-size: 3.5em;
+    text-align: center;
+    padding: 20px 0;
+
+}
+#homeMainInfo{
+    width: 80%;
+    margin: 15px auto;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 700px;
+}
+.homeBottomSection{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 300px);
+}
+#pinkIcon, #blueIcon{
+    display: none;
+}
+.homeBottomSection1{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.homeButtonsDiv{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+.homeButtonsDiv button{
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    width: 45%;
+    max-width: 350px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.homeButtonsDiv button:first-of-type{
+    background-color: #e8e0fb;
+}
+.homeImgsDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    margin-top: auto;
+}
+.homeImgsDiv img{
+    width: 65%;
+    max-width: 350px;
+}
+/*  */
 #logoIcon{
     width: 65px;
     user-select: none;
@@ -41,16 +100,7 @@
     width: 30px;
     margin: 0 20px;
 }
-#homepageTitle_1{
-    font-size: 6em;
-    text-align: center;
-    overflow-x: auto;
-}
-#homepageTitle_2{
-    font-size: 3em;
-    text-align: center;
-    line-height: 1;
-}
+
 .hr_type1{
     margin: 20px 15px;
     margin-top: 40px;
@@ -67,32 +117,8 @@
     padding-top: 10px;
 }
 
-#homepageTitle_22,#homepageTitle_12,#changingText2{
+#changingText2{
     display: none;
-}
-#homepageTitle_description{
-    text-align: center;
-    margin: 10px 20px;
-    line-height: 1.4;
-    font-size: 1.1em;
-}
-#homepageTitle_buttonSection{
-    width: calc(100% - 20px);
-    height: 60px;
-    display: flex;
-    margin: 10px;
-    align-items: center;
-}
-.homepageTitle_buttons{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e6e6f5;
-    color: #2b2b3a;
-    font-weight: 600;
-    border-radius: 6px;
-    height: 50px;
 }
 .linksa{
     color: #2b2b3a;
@@ -107,22 +133,7 @@
 .homepageImg{
     width: 50%;
 }
-#pinkQuestionMark{
-    margin-left: 15%;
-    position: relative;
-    transform: scaleX(-1);
-    user-select: none;
-    -webkit-user-drag: none;
-}
-#blueQuestionMark{
-    margin-left: -30%;
-    position: relative;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-.homepageImg2{
-    display: none;
-}
+
 #homepage_closeIcon,#settingspage_closeIcon,#playgamepage_closeIcon{
     width: 30px;
     position: absolute;
@@ -580,49 +591,23 @@
 }
 
 @media screen and (max-width: 200px) {
-    #playgameContainer,#firstpageContainer{
+    #playgameContainer,.homeContainer{
         overflow-x: auto;
     }
 }
 
 @media screen and (max-width:480px) and (min-height:700px){
-    #homepageTitle_buttonSection{
-        position: relative;
-        top: 25px;
-    }
     #homepageImages{
         position: relative;
         top: 60px;
     }
 }
 @media screen and (min-width:481px) {
-    #firstpageContainer{
-        min-height: 100vh;
-        height: auto;
-    }
     #logoIcon{
         width: 80px;
     }
     .menuIcons,#homepage_closeIcon,#settingspage_closeIcon,#playgamepage_closeIcon{
         width: 35px;
-    }
-    #homepageTitle_1{
-        font-size: 6em;
-    }
-    #homepageTitle_2{
-        font-size: 4em;
-    }
-    #changingText{
-        font-size: 2.5em;
-        height: 100px;
-    }
-    #homepageTitle_description{
-        font-size: 23px;
-        margin-bottom: 20px;
-    }
-   
-    .homepageTitle_buttons{
-        font-size: 1.4em;
     }
     .homepageMenu_items{
         font-size: 1.3em;
@@ -741,7 +726,7 @@
     }
 
 }
-@media screen and (min-width:1024px){
+@media screen and (min-width:1025px){
     .bigscreenNav{
         display: flex;
         font-size: 23px;
@@ -762,9 +747,6 @@
     .menuIcons{
         display: none;
     }
-    #container_inner{
-        display: flex;
-    }
     #changingText2{
         display: block;
         width: calc(100%-20px);
@@ -777,41 +759,61 @@
         font-size: 1.8em;
         padding-top: 10px;
     }
-    #homepageTitle_12{
-        font-size: 5.5em;
-        text-align: center;
-        display: block;
-        padding-top: 20px;
+    /*  */
+    .homeTopSection > h1{
+        font-size: 5em;
+        padding: 30px 0;
+    
     }
-    #homepageTitle_22{
-        font-size: 3.5em;
-        text-align: center;
-        line-height: 1;
-        display: block;
+    .homeBottomSection{
+        min-height: 0px;
+        min-height: calc(100vh - 400px);
     }
-    #homepageTitle_2,#homepageTitle_1,#changingText{
+    .homeBottomSection1{
+        display: flex;
+        margin: auto;
+    }
+    #homeMainInfo{
+        font-size: 25px;
+        max-width: 850px;
+        text-align: center;
+        margin: auto;
+        margin-top: 15px;
+    }
+    #pinkIcon, #blueIcon{
+        display: block;
+        width: 25vw;
+        max-width: 400px;
+    }
+    #pinkIcon{
+        transform: rotateY(180deg);
+    }
+    .homeButtonsDiv{
+        width: 45vw;
+        max-width: none;
+    }
+    .homeButtonsDiv button{
+        padding: 20px;
+        font-size: 25px;
+    }
+    .homeButtonsDiv button:hover{
+        border-radius: 100px;
+        color: whitesmoke;
+        background-color: rgb(0, 0, 44);
+    }
+    .homeButtonsDiv button a:hover{
+        color: whitesmoke;
+    }
+    .homeImgsDiv{
         display: none;
     }
-    #homepageTitle{
-        width: 50%;
-    }
-    #homepageTitle_description{
-        padding: 50px 0;
-        margin: 20px 0;
-        font-size: 22px;
-    }
+    /*  */
+
     #homepageImages{
         display: none;
     }
-    .homepageImg2{
-        display: block;
-        width: 25%;
-        position: relative;
-        top: 20px;
-    }
-    #pinkQuestionMark2{
-        transform: scaleX(-1);
-    }
+
+  
     #InstructionsContainer{
         font-size: 150%;
     }
@@ -833,10 +835,6 @@
     
 }
 @media screen and (min-width:1200px) {
-    #firstpageContainer{
-        font-size: 150%;
-        overflow-x: hidden;
-    }
     #settingspageContainer{
         font-size: 150%;
     }
@@ -852,18 +850,6 @@
     #logoIcon2{
         width: 80px;
         margin-top: 10px;
-    }
-    #homepageTitle_description{
-        font-size: 30px;
-    }
-    .homepageTitle_buttons{
-        padding: 40px;
-    }
-    .homepageTitle_buttons:hover{
-        background-color: #4c8af580;
-        color: white;
-        font-size: 110%;
-        padding: 60px 40px;
     }
     #difficultySection_header_text{
         font-size: 120%;
