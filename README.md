@@ -10,4 +10,4 @@ After the game is finished, all the correct answers are then provided at the end
 
 ### It is Easy and fun to play.
 
-## [Play] (https://guesstheanswers.netlify.app/)
+### [Get-started](https://guesstheanswers.netlify.app/)

@@ -40,6 +40,29 @@ function checkDifficulty(){
 }
 checkDifficulty()
 
+// display selected categories
+let categorySelection_cars = document.getElementById("categorySelection_cars")
+let categorySelection_countries = document.getElementById("categorySelection_countries")
+let categorySelection_football = document.getElementById("categorySelection_football")
+let categorySelection_none = document.getElementById("categorySelection_none")
+
+const displaySelectedCategories = () => {
+    let selectedCategoryArray = localStorage.getItem("selectedCategoryArray")
+    if(selectedCategoryArray.includes("Cars")){
+        categorySelection_cars.style.display = "block"
+        categorySelection_none.style.display = "none"
+    }
+    if(selectedCategoryArray.includes("Football")){
+        categorySelection_football.style.display = "block"
+        categorySelection_none.style.display = "none"
+    }
+    if(selectedCategoryArray.includes("Countries")){
+        categorySelection_countries.style.display = "block"
+        categorySelection_none.style.display = "none"
+    }
+}
+displaySelectedCategories()
+// 
 
 function removeSelected(){
     easy_selection.classList.remove("dc_selection_active")
